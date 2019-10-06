@@ -1,0 +1,9 @@
+@font-face {
+  font-family: yekan;
+  src: url("/fonts/YekanWeb-Regular.woff2");
+}
+
+* {
+  font-family: yekan, sans-serif;
+}
+
