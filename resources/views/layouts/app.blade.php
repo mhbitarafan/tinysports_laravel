@@ -23,18 +23,8 @@
 <body>
     <div id="app">
         <v-app>
-            <div>
-                <v-row justify="center" align="center" class="primary elevation-6">
-                    <v-col cols=12 xl=9 class="py-0">
-                        <v-app-bar color="primary" dark elevation="0">
-                            <v-app-bar-nav-icon></v-app-bar-nav-icon>
-                            <v-toolbar-title class="pb-1">تاینی اسپرت</v-toolbar-title>
-                        </v-app-bar>
-                    </v-col>
-                </v-row>
-            </div>
-
-            <main class="py-4">
+            @include('layouts.header')
+            <main class="fill-height py-4">
                 @yield('content')
             </main>
         </v-app>

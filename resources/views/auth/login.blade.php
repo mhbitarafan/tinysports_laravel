@@ -1,73 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+<v-container fluid class="fill-height">
+    <v-row justify="center" align="center">
+        <v-col cols=12 sm=9 md=7 lg=5 xl=4>
+            <v-card>
+                <v-toolbar color="primary" dark flat>
+                    <v-toolbar-title>ورود</v-toolbar-title>
+                    <div class="flex-grow-1"></div>
+                    <v-icon>mdi-account</v-icon>
+                </v-toolbar>
+                <v-card-text>
+                    <v-form method="POST" action="{{ route('login') }}">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                        <v-text-field name="email" label="آدرس ایمیل" type="email"></v-text-field>
+                            <v-text-field name="password" label="رمز عبور" type="password"></v-text-field>
+                        <v-col cols=12 class="pa-0">
+                            <v-checkbox label="مرا به خاطر بسپار" name="remember"></v-checkbox>
+                        </v-col>
+                        <v-col cols=12 class="pa-0">
+                            <v-btn color="primary" type="submit">
+                                ورود
+                            </v-btn>
+                            @if (Route::has('password.request'))
+                            <v-btn text class="px-2 py-1 mr-2 my-1" href="{{ route('password.request') }}">
+                                رمز عبور خود را فراموش کرده اید؟
+                            </v-btn>
+                            @endif
+                        </v-col>
+                    </v-form>
+                </v-card-text>
+            </v-card>
+        </v-col>
+    </v-row>
+</v-container>
 @endsection
