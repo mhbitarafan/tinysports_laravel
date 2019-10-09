@@ -17,11 +17,11 @@ const opts = {
       },
       theme: {
         themes: {
-          light: {
-            primary: '#563fb5',
-            secondary: '#8f83d4',
-            accent: '#8c9eff',
-          },
+          light:{
+            primary: '#673ab7',
+            secondary: '#e91e63',
+            accent: '#9c27b0',
+            }, 
         },
       },
 }

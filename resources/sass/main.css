@@ -1,9 +1,13 @@
 @font-face {
   font-family: yekan;
-  src: url("/fonts/BYekan.woff");
+  src: url("/fonts/BYekan.woff2");
 }
 * {
   font-family: yekan, sans-serif;
+}
+html {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 input[type="email"],
 input[type="password"] {

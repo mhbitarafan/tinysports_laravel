@@ -3,7 +3,11 @@
         <v-col cols=12 xl=9 class="py-0">
             <v-app-bar color="primary" dark elevation="0">
                 <v-app-bar-nav-icon></v-app-bar-nav-icon>
-                <v-toolbar-title>تاینی اسپرت</v-toolbar-title>
+                <v-toolbar-title>
+                    <v-btn text large href="http://localhost:8080/" class="pa-2">
+                        تاینی اسپرت
+                    </v-btn>
+                </v-toolbar-title>
                 <div class="flex-grow-1"></div>
                 @guest
                 <v-btn text href="{{ route('login') }}">ورود</v-btn>
