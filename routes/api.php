@@ -18,9 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/orders', function () {
-    return App\Order::paginate(5);
+    return App\Order::paginate(10);
 });
 
 Route::get('/products', function () {
-    return App\Product::paginate(5);
+    return App\Product::all();
 });
