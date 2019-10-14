@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
-
+use Artisan;
 class ProductController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        Artisan::call('db:seed --class=productTableSeeder');
     }
 
     /**
