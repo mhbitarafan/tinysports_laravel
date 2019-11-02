@@ -1,12 +1,12 @@
 import '@mdi/font/css/materialdesignicons.css'
 import Vue from 'vue'
 import Vuetify, {
-    VApp, VContainer, VContent, VAppBar, VAppBarNavIcon, VBtn, VIcon, VToolbar, VToolbarItems, VToolbarTitle, VRow, VCol, VCard, VCardText, VCardTitle, VForm, VTextarea, VTextField, VDialog, VSwitch, VRadio, VMenu, VList, VListItem, VCheckbox, VTabs, VTab, VTabItem, VSimpleTable
+    VApp, VContainer, VContent, VAppBar, VAppBarNavIcon, VBtn, VIcon, VToolbar, VToolbarItems, VToolbarTitle, VRow, VCol, VCard, VCardText, VCardTitle, VForm, VTextarea, VTextField, VDialog, VSwitch, VRadio, VMenu, VList, VListItem, VCheckbox, VTabs, VTab, VTabItem, VSimpleTable, VSelect
   } from 'vuetify/lib'
 
   Vue.use(Vuetify, {
     components: {
-      VApp, VContainer, VContent, VAppBar, VAppBarNavIcon, VBtn, VIcon, VToolbar, VToolbarItems, VToolbarTitle, VRow, VCol, VCard, VCardText, VCardTitle, VForm, VTextarea, VTextField, VDialog, VSwitch, VRadio, VMenu, VList, VListItem, VCheckbox, VTabs, VTab, VTabItem, VSimpleTable
+      VApp, VContainer, VContent, VAppBar, VAppBarNavIcon, VBtn, VIcon, VToolbar, VToolbarItems, VToolbarTitle, VRow, VCol, VCard, VCardText, VCardTitle, VForm, VTextarea, VTextField, VDialog, VSwitch, VRadio, VMenu, VList, VListItem, VCheckbox, VTabs, VTab, VTabItem, VSimpleTable, VSelect
     },
   })  
 

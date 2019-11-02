@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        Artisan::call('db:seed --class=productTableSeeder');
+        // Artisan::call('db:seed --class=productTableSeeder');
+        $products = Product::paginate(120);
+        return $products;
     }
 
     /**
